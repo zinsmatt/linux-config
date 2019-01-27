@@ -1,6 +1,8 @@
 option=$1
+sudo apt -y install build-essential
 
 sudo apt -y install git git-gui
+
 me=$(whoami)
 
 
@@ -23,5 +25,7 @@ if [ "$option" = "all" ]; then
   ./miniconda.sh
   ./cmake.sh
 fi
+
+sudo apt -y install gparted
 
 echo "End"

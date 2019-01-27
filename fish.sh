@@ -1,3 +1,5 @@
+sudo apt-add-repository -y ppa:fish-shell/release-3
+sudo apt update
 sudo apt -y install fish
 
 echo "Fish shell set as default"

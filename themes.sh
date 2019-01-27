@@ -1,4 +1,4 @@
- sudo apt install -y gnome-tweak-tool
+sudo apt install -y gnome-tweak-tool
 
 # Paper theme
 sudo add-apt-repository -u ppa:snwh/ppa

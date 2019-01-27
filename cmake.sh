@@ -1,3 +1,5 @@
+cur_dir=$(pwd)
+
 mkdir ~/opt/cmake
 
 cd ~/lib
@@ -12,7 +14,8 @@ me=$(whoami)
 make -j8
 make install
 
-echo 'export PATH=$PATH:/home/matthieu/opt/cmake/bin' >> ~/.bashrc
+echo -e "\n# CMake" >> ~/.bashrc
+echo -e 'export PATH=$PATH:/home/matthieu/opt/cmake/bin\n' >> ~/.bashrc
 source  ~/.bashrc
 
 # ccmake
@@ -28,3 +31,5 @@ cmake . -DBUILD_QtDialog=ON -DQt5Core_DIR=/home/$me/Qt/5.9.6/gcc_64/lib/cmake/Qt
         -DQt5Widgets_DIR=/home/$me/Qt/5.9.6/gcc_64/lib/cmake/Qt5Widgets
 make -j8
 make install
+
+cd $cur_dir

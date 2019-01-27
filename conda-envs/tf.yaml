@@ -1,0 +1,8 @@
+name: tf
+
+dependencies:
+  - python=3.5
+  - numpy
+  - tensorflow-gpu
+  - matplotlib
+  - spyder

@@ -12,3 +12,8 @@ me=$(whoami)
 
 echo -e "\n# Miniconda" >> ~/.config/fish/config.fish
 echo -e "source /home/$me/miniconda3/etc/fish/conf.d/conda.fish\n" >> ~/.config/fish/config.fish
+
+fish
+# Do not minimize current path
+set -U fish_prompt_pwd_dir_length 0
+exit

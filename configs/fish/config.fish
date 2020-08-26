@@ -39,6 +39,7 @@ alias f="find ./ -name"
 
 alias m="make -j16"
 alias cm="cmake-gui ."
+alias gt="git citool"
 
 # Create a new directory and enter it
 function mkd
@@ -53,11 +54,33 @@ end
 # x : to set
 # e : to unset
 
+set -xg LC_ALL C
+
 # CUDA
 set -xg PATH "/usr/local/cuda/bin" $PATH
 
 # CMake
-set -xg PATH "/home/matthieu/opt/cmake/bin" $PATH
+set -xg PATH "/home/mzins/opt/cmake/bin" $PATH
 
 # Qt
-set -xg LD_LIBRARY_PATH "/home/matthieu/Qt/5.9.6/gcc_64/lib" $LD_LIBRARY_PATH
+set -xg LD_LIBRARY_PATH "/home/mzins/Qt/5.9/gcc_64/lib" $LD_LIBRARY_PATH
+set -xg LD_LIBRARY_PATH "/home/mzins/Qt/5.10.1/gcc_64/lib" $LD_LIBRARY_PATH
+set -xg LD_LIBRARY_PATH "/home/mzins/Qt/5.11.0/gcc_64/lib" $LD_LIBRARY_PATH
+
+# Miniconda
+source /home/mzins/miniconda3/etc/fish/conf.d/conda.fish
+
+# VTK
+set -xg LD_LIBRARY_PATH "/home/mzins/opt/vtk/lib" $LD_LIBRARY_PATH
+
+# LibPointMatcher
+set -xg LD_LIBRARY_PATH "/home/mzins/opt/libpointmatcher/lib" $LD_LIBRARY_PATH
+
+# LibNabo
+set -xg LD_LIBRARY_PATH "/home/mzins/opt/libnabo/lib" $LD_LIBRARY_PATH
+
+# Add 3D vision to pythonpath
+set -xg PYTHONPATH "/home/mzins/dev/3D-Vision/" $PYTHONPATH
+set -xg PYTHONPATH "/home/mzins/dev/Localization_from_ellipsoids/" $PYTHONPATH
+set -xg PYTHONPATH "/home/mzins/dev/Localization_from_ellipsoids/uncertainties" $PYTHONPATH
+

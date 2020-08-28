@@ -46,7 +46,6 @@ function mkd
 	mkdir -p "$argv"; and cd "$argv";
 end
 
-
 # Set environment variables
 # l : local (only 1 session and 1 scope)
 # g : global (only 1 session, all scopes)

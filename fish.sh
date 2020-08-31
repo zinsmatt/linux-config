@@ -7,6 +7,7 @@ echo "Fish shell set as default"
 
 cp -r configs/fish ~/.config/
 
+sudo cp configs/fish_is_root_user.fish /usr/share/fish/functions
 
 me=$(whoami)
 

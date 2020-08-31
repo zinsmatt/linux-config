@@ -18,6 +18,7 @@ function fish_prompt --description "Write out the prompt"
         set suffix '#'
     else
         set color_cwd $fish_color_cwd
+        set color_cwd 32a852
         set suffix '>'
     end
     set color_dir $fish_color_param

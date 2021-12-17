@@ -41,6 +41,10 @@ alias m="make -j16"
 alias cm="cmake-gui ."
 alias gt="git citool"
 
+alias d="cd /home/mzins/dev"
+alias o="cd /home/mzins/opt"
+alias h="cd /home/mzins"
+
 # Create a new directory and enter it
 function mkd
 	mkdir -p "$argv"; and cd "$argv";
@@ -62,9 +66,10 @@ set -xg PATH "/usr/local/cuda/bin" $PATH
 set -xg PATH "/home/mzins/opt/cmake/bin" $PATH
 
 # Qt
-set -xg LD_LIBRARY_PATH "/home/mzins/Qt/5.9/gcc_64/lib" $LD_LIBRARY_PATH
-set -xg LD_LIBRARY_PATH "/home/mzins/Qt/5.10.1/gcc_64/lib" $LD_LIBRARY_PATH
-set -xg LD_LIBRARY_PATH "/home/mzins/Qt/5.11.0/gcc_64/lib" $LD_LIBRARY_PATH
+set -xg LD_LIBRARY_PATH "/home/mzins/Qt/5.15.0/gcc_64/lib" $LD_LIBRARY_PATH
+#set -xg LD_LIBRARY_PATH "/home/mzins/Qt/5.12.9/gcc_64/lib" $LD_LIBRARY_PATH
+#set -xg LD_LIBRARY_PATH "/home/mzins/Qt/5.10.1/gcc_64/lib" $LD_LIBRARY_PATH
+#set -xg LD_LIBRARY_PATH "/home/mzins/Qt/5.11.0/gcc_64/lib" $LD_LIBRARY_PATH
 
 # Miniconda
 source /home/mzins/miniconda3/etc/fish/conf.d/conda.fish
@@ -82,4 +87,50 @@ set -xg LD_LIBRARY_PATH "/home/mzins/opt/libnabo/lib" $LD_LIBRARY_PATH
 set -xg PYTHONPATH "/home/mzins/dev/3D-Vision/" $PYTHONPATH
 set -xg PYTHONPATH "/home/mzins/dev/Localization_from_ellipsoids/" $PYTHONPATH
 set -xg PYTHONPATH "/home/mzins/dev/Localization_from_ellipsoids/uncertainties" $PYTHONPATH
+#set -xg PYTHONPATH "/home/mzins/dev/Learning_Uncertainties/ellipse_from_object" $PYTHONPATH
+
+
+set -xg PYTHONPATH "/home/mzins/lib/Pangolin/build/src" $PYTHONPATH
+
+
+#set -xg PYTHONPATH "/home/mzins/dev/pyellcv" $PYTHONPATH
+
+set -xg GTE_PATH "/home/mzins/lib/GeometricTools/GTE"
+
+
+# OpenCV
+# set -xg LD_LIBRARY_PATH "/home/mzins/opt/opencv/lib" $LD_LIBRARY_PATH
+# Pangolin
+set -xg LD_LIBRARY_PATH "/home/mzins/opt/Pangolin/lib" $LD_LIBRARY_PATH
+
+
+# For PoseNet (but conflicts with my utils)
+set -xg PYTHONPATH "/home/mzins/dev/visloc-apr" $PYTHONPATH
+set -xg PYTHONPATH "/home/mzins/dev/visloc-apr/utils" $PYTHONPATH
+
+# For Pose Refinement
+set -xg PYTHONPATH "/home/mzins/dev/pose_refinement" $PYTHONPATH
+
+# 3D-Aware ellipse prediction
+#set -xg PYTHONPATH "/home/mzins/dev/3D-Aware_Ellipses_for_Visual_Localization" $PYTHONPATH
+
+
+# GTSAM
+set -xg LD_LIBRARY_PATH "/home/mzins/opt/gtsam/lib" $LD_LIBRARY_PATH
+
+
+# GTSAM python
+set -xg PYTHONPATH "/home/mzins/opt/gtsam" $PYTHONPATH
+# Quadricslam python
+set -xg PYTHONPATH "/home/mzins/dev/quadricslam/build/cython/quadricslam" $PYTHONPATH
+
+
+# 3D-Aware Ellipse prediction
+set -xg PYTHONPATH "/home/mzins/dev/3D-Aware-Ellipses-for-Visual-Localization" $PYTHONPATH
+
+# NetVLAD
+set -xg PYTHONPATH "/home/mzins/dev/OpenIBL" $PYTHONPATH
+
+set -xg PYTHONPATH "/home/mzins/dev/Pose_from_relative" $PYTHONPATH
+
 
